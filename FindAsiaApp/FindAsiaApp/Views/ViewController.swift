@@ -41,7 +41,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView,
                     titleForRow row: Int,
                     forComponent component: Int) -> String? {
-        
         return countrys[row]
     }
     func pickerView(_ pickerView: UIPickerView,
@@ -54,39 +53,44 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         } else if selectCountry == countrys[1] {
             selectButton.isEnabled = true
             selecnumber = 1
-        } else {
+        } else if selectCountry == countrys[2]{
             selectButton.isEnabled = true
             selecnumber = 2
+        } else if selectCountry == countrys[3]{
+            selectButton.isEnabled = true
+            selecnumber = 3
         }
+        
     }
     @IBAction func findButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "DetailCountryView", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailCountryView") as! DetailCountryView
+    
         if selectCountry == countrys[0] {
             print("nothing")
         } else if selectCountry == countrys[1] {
-            vc.selectedCountry = article.country[0].name
-            vc.selectedTips = article.country[0].article
-            vc.selectedImage = UIImage(named: String(article.country[0].image))
-            vc.selectedNumber = String(article.country[0].number)
-            vc.selectedSqure = article.country[0].scale
-            vc.selectedHistory = article.country[0].history
+            vc.selectedCountry = article.country[selecnumber-1].name
+            vc.selectedTips = article.country[selecnumber].article
+            vc.selectedImage = UIImage(named: String(article.country[selecnumber-1].image))
+            vc.selectedNumber = String(article.country[selecnumber-1].number)
+            vc.selectedSqure = article.country[selecnumber-1].scale
+            vc.selectedHistory = article.country[selecnumber-1].history
             self.navigationController?.pushViewController(vc, animated: true)
         }  else if selectCountry == countrys[2]{
-            vc.selectedCountry = article.country[1].name
-            vc.selectedTips = article.country[1].article
-            vc.selectedImage = UIImage(named: String(article.country[1].image))
-            vc.selectedNumber = String(article.country[1].number)
-            vc.selectedSqure = article.country[1].scale
-            vc.selectedHistory = article.country[1].history
+            vc.selectedCountry = article.country[selecnumber-1].name
+            vc.selectedTips = article.country[selecnumber].article
+            vc.selectedImage = UIImage(named: String(article.country[selecnumber-1].image))
+            vc.selectedNumber = String(article.country[selecnumber-1].number)
+            vc.selectedSqure = article.country[selecnumber-1].scale
+            vc.selectedHistory = article.country[selecnumber-1].history
             self.navigationController?.pushViewController(vc, animated: true)
         }  else if selectCountry == countrys[3]{
-            vc.selectedCountry = article.country[2].name
-            vc.selectedTips = article.country[2].article
-            vc.selectedImage = UIImage(named: String(article.country[2].image))
-            vc.selectedNumber = String(article.country[2].number)
-            vc.selectedSqure = article.country[2].scale
-            vc.selectedHistory = article.country[2].history
+            vc.selectedCountry = article.country[selecnumber-1].name
+            vc.selectedTips = article.country[selecnumber-1].article
+            vc.selectedImage = UIImage(named: String(article.country[selecnumber-1].image))
+            vc.selectedNumber = String(article.country[selecnumber-1].number)
+            vc.selectedSqure = article.country[selecnumber-1].scale
+            vc.selectedHistory = article.country[selecnumber-1].history
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
