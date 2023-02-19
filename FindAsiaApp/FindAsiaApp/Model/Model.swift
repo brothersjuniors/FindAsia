@@ -13,12 +13,15 @@ struct Country {
     var article: String
     var image: String
     var scale: String
-    init(id: Int, name: String, number: Int, article: String, image: String, scale: String) {
+    var history: String
+    init(id: Int, name: String, number: Int, article: String, image: String, scale: String, history: String) {
         self.id = id
         self.name = name
         self.number = number
         self.article = article
         self.image = image
         self.scale = scale
+        self.history = history
     }
-}
+    }
+

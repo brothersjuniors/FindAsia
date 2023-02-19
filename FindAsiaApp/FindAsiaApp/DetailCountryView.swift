@@ -8,7 +8,8 @@ class DetailCountryView: UIViewController {
     var selectedCountry = "Country"
     
     @IBOutlet weak var countryImage: UIImageView!
-    var selectedImage = ""
+    var selectedImage: UIImage?
+
     @IBOutlet weak var historyTextView: UITextView!
     var selectedHistory = ""
     @IBOutlet weak var citizenNumberLabel: UILabel!
@@ -26,7 +27,7 @@ class DetailCountryView: UIViewController {
         navigationItem.title = selectedCountry
         historyTextView.text = selectedHistory
         tipTextView.text = selectedTips
-       // countryImage.image = UIImage(named: "selectedImage")
+        countryImage.image = selectedImage
         citizenNumberLabel.text = String(selectedNumber)
         squeraLabel.text = selectedSqure
 
