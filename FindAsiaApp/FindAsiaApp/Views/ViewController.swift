@@ -26,7 +26,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         navigationItem.largeTitleDisplayMode = .automatic
         navigationController?.navigationBar.prefersLargeTitles = true
         images.image = UIImage(named: "1")
-        // 角丸にする
         images.layer.cornerRadius = 150
         images.clipsToBounds = true
         images.frame = CGRect(x:0, y:0, width:300, height:300)
