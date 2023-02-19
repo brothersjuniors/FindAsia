@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADC01C8529A1EA870091743C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC01C8429A1EA870091743C /* Article.swift */; };
 		ADF0990829A0FF1A006D93C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0990729A0FF1A006D93C2 /* AppDelegate.swift */; };
 		ADF0990A29A0FF1A006D93C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0990929A0FF1A006D93C2 /* SceneDelegate.swift */; };
 		ADF0990C29A0FF1A006D93C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0990B29A0FF1A006D93C2 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ADC01C8429A1EA870091743C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		ADF0990429A0FF1A006D93C2 /* FindAsiaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindAsiaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF0990729A0FF1A006D93C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADF0990929A0FF1A006D93C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				ADF0992229A13504006D93C2 /* Model.swift */,
+				ADC01C8429A1EA870091743C /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			files = (
 				ADF0992329A13504006D93C2 /* Model.swift in Sources */,
 				ADF0991E29A11053006D93C2 /* DetailCountryView.swift in Sources */,
+				ADC01C8529A1EA870091743C /* Article.swift in Sources */,
 				ADF0990C29A0FF1A006D93C2 /* ViewController.swift in Sources */,
 				ADF0990829A0FF1A006D93C2 /* AppDelegate.swift in Sources */,
 				ADF0990A29A0FF1A006D93C2 /* SceneDelegate.swift in Sources */,
