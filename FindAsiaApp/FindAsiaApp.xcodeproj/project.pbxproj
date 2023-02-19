@@ -45,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADC01C8629A1EE120091743C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADF0991D29A11053006D93C2 /* DetailCountryView.swift */,
+				ADF0990B29A0FF1A006D93C2 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ADC01C8729A1EE200091743C /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ADF0990D29A0FF1A006D93C2 /* Main.storyboard */,
+				ADF0991F29A1132A006D93C2 /* DetailCountryView.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
 		ADF098FB29A0FF1A006D93C2 = {
 			isa = PBXGroup;
 			children = (
@@ -67,13 +85,11 @@
 				ADF0992129A134EA006D93C2 /* Model */,
 				ADF0990729A0FF1A006D93C2 /* AppDelegate.swift */,
 				ADF0990929A0FF1A006D93C2 /* SceneDelegate.swift */,
-				ADF0990B29A0FF1A006D93C2 /* ViewController.swift */,
-				ADF0990D29A0FF1A006D93C2 /* Main.storyboard */,
+				ADC01C8629A1EE120091743C /* Views */,
+				ADC01C8729A1EE200091743C /* storyboards */,
 				ADF0991029A0FF1B006D93C2 /* Assets.xcassets */,
 				ADF0991229A0FF1B006D93C2 /* LaunchScreen.storyboard */,
 				ADF0991529A0FF1B006D93C2 /* Info.plist */,
-				ADF0991D29A11053006D93C2 /* DetailCountryView.swift */,
-				ADF0991F29A1132A006D93C2 /* DetailCountryView.storyboard */,
 			);
 			path = FindAsiaApp;
 			sourceTree = "<group>";
