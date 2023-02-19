@@ -18,31 +18,24 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
     let images = UIImageView()
-    
     @IBOutlet weak var coutryPicker: UIPickerView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         coutryPicker.delegate = self
-        
-        
         navigationItem.title = "Asia"
         navigationItem.largeTitleDisplayMode = .automatic
         navigationController?.navigationBar.prefersLargeTitles = true
-        
         images.image = UIImage(named: "1")
-        images.layer.cornerRadius = 100
+        // 角丸にする
+        images.layer.cornerRadius = 150
+        images.clipsToBounds = true
         images.frame = CGRect(x:0, y:0, width:300, height:300)
-        
         images.center = CGPoint(x:screenWidth/2, y:screenHeight * 6/15)
-        
         self.view.addSubview(images)
-        
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return countrys.count
     }
@@ -52,16 +45,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         return countrys[row]
     }
-    
     func pickerView(_ pickerView: UIPickerView,
                     didSelectRow row: Int,
                     inComponent component: Int) {
-        
         navigationItem.title = countrys[row]
-        
-        
         selectCountry = countrys[row]
-        
         if selectCountry == countrys[0] {
             selectButton.isEnabled = false
         } else if selectCountry == countrys[1] {
@@ -70,16 +58,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         } else {
             selectButton.isEnabled = true
             selecnumber = 2
-            
-            
         }
-        
     }
-    
     @IBAction func findButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "DetailCountryView", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DetailCountryView") as! DetailCountryView
-        //
         if selectCountry == countrys[0] {
             print("nothing")
         } else if selectCountry == countrys[1] {
@@ -90,7 +73,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             vc.selectedSqure = article.country[0].scale
             vc.selectedHistory = article.country[0].history
             self.navigationController?.pushViewController(vc, animated: true)
-            
         }  else if selectCountry == countrys[2]{
             vc.selectedCountry = article.country[1].name
             vc.selectedTips = article.country[1].article
@@ -107,8 +89,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             vc.selectedSqure = article.country[2].scale
             vc.selectedHistory = article.country[2].history
             self.navigationController?.pushViewController(vc, animated: true)
-            
-            
         }
     }
 }

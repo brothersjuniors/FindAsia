@@ -48,8 +48,8 @@
 		ADC01C8629A1EE120091743C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ADF0991D29A11053006D93C2 /* DetailCountryView.swift */,
 				ADF0990B29A0FF1A006D93C2 /* ViewController.swift */,
+				ADF0991D29A11053006D93C2 /* DetailCountryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

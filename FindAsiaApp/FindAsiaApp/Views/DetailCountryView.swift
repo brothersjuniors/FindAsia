@@ -3,13 +3,10 @@
 import UIKit
 
 class DetailCountryView: UIViewController {
-    
     @IBOutlet weak var countryLabel: UILabel!
     var selectedCountry = "Country"
-    
     @IBOutlet weak var countryImage: UIImageView!
     var selectedImage: UIImage?
-
     @IBOutlet weak var historyTextView: UITextView!
     var selectedHistory = ""
     @IBOutlet weak var citizenNumberLabel: UILabel!
@@ -18,8 +15,6 @@ class DetailCountryView: UIViewController {
     var selectedSqure = ""
     @IBOutlet weak var tipTextView: UITextView!
     var selectedTips = ""
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = ""
@@ -30,10 +25,5 @@ class DetailCountryView: UIViewController {
         countryImage.image = selectedImage
         citizenNumberLabel.text = String(selectedNumber)
         squeraLabel.text = selectedSqure
-
-        
-        
     }
-    
-    
 }
